@@ -1,2 +1,4 @@
-# Code-camp-
-Code camp files and projects
+# Code camp
+Code club files and projects
+
+
