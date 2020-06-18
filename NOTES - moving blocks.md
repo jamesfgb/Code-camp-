@@ -38,9 +38,9 @@ block.hspeed = 1
 Then use these in the game loop where it moves the block
 ```
 
-      # move the block
-      self.rect.top += self.vspeed
-      self.rect.left += self.hspeed
+    # update the game 
+    block.rect.top += block.vspeed
+    block.rect.left += block.hspeed  
 
 ```
 Try this out. Does it do anything different?  What else are you going to need to bounce off the edge? 
