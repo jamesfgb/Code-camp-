@@ -34,4 +34,13 @@ Then use these in the game loop where it moves the block
       self.rect.left += self.hspeed
 
 ```
-Try this out. Does it do anything different?
+Try this out. Does it do anything different?  You need some `ifs` to do the bouncing. This will start you off, can you complete it:
+```
+
+    # update the game 
+    block.rect.top += block.vspeed
+    block.rect.left += block.hspeed  
+    if block.rect.bottom>=WINDOWHEIGHT and block.vspeed>0:
+        # bounce off the bottom --- can you fill this in?
+
+```
