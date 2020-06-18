@@ -30,8 +30,6 @@ class Block:
     def __init__(self, a, b, c, d, colour):
         self.rect = pygame.Rect(a, b, c, d)
         self.colour = colour
-        self.vspeed = 0
-        self.hspeed = 0
 
 # create a block sprite
 block = Block(100,100,100,100, BLUE)
