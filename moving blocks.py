@@ -25,27 +25,39 @@ RED = (255, 0, 0)
 GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
-# Set up the block sprite
+# Define the block sprite
 class Block:
     def __init__(self, a, b, c, d, colour):
         self.rect = pygame.Rect(a, b, c, d)
         self.colour = colour
+        self.vspeed = 0
+        self.hspeed = 0
 
+# create a block sprite
 block = Block(100,100,100,100, BLUE)
 
 # Run the game loop.
-while True:
-    for event in pygame.event.get():
-        if event.type == QUIT:
-            pygame.quit()
-            sys.exit()
+running = True
+while running:
 
     # Draw the white background onto the surface.
     windowSurface.fill(WHITE)
-
-    # Draw the box onto the surface.
+    # Draw the sprite(s) onto the surface.
     pygame.draw.rect(windowSurface, block.colour, block.rect)
-
     # Draw the window onto the screen.
     pygame.display.update()
+
+    # handle user input (i.e. events)
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            running = False
+
+    # update the game
+    block.rect.top += 2
+    block.rect.left += 1
+
+    # control the frame rate
     time.sleep(0.02)
+
+# game finished so tidy up
+pygame.quit()
