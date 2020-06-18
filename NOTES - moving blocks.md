@@ -26,6 +26,15 @@ class Block:
         self.hspeed = 0
 
 ```
+Then set the value when you create the block:
+```
+
+# create a block sprite        
+block = Block(100,100,100,100, BLUE)
+block.vspeed = 2
+block.hspeed = 1
+
+```
 Then use these in the game loop where it moves the block
 ```
 
@@ -34,13 +43,4 @@ Then use these in the game loop where it moves the block
       self.rect.left += self.hspeed
 
 ```
-Try this out. Does it do anything different?  You need some `ifs` to do the bouncing. This will start you off, can you complete it:
-```
-
-    # update the game 
-    block.rect.top += block.vspeed
-    block.rect.left += block.hspeed  
-    if block.rect.bottom>=WINDOWHEIGHT and block.vspeed>0:
-        # bounce off the bottom --- can you fill this in?
-
-```
+Try this out. Does it do anything different?  What else are you going to need to bounce off the edge? 
