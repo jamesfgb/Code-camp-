@@ -43,13 +43,15 @@ nextplayer = 0
 
 while True:
     # start the player's turns
-
+    
     # display the grid of cards
-
+    for n in range(len(pack)):
+        print(n, pack[n])
+    
     # input the player's choices
-
+    move = input('Please input your move')
     # check if they made a match
-
+    
     # go on to the next player
     nextplayer += 1
 
