@@ -27,12 +27,12 @@ BLUE = (0, 0, 255)
 
 # Define the block sprite
 class Block:
-    def __init__(self, a, b, c, d, colour):
-        self.rect = pygame.Rect(a, b, c, d)
+    def __init__(self, left, top, width, height, colour):
+        self.rect = pygame.Rect(left, top, width, height)
         self.colour = colour
 
 # create a block sprite
-block = Block(100,100,100,100, BLUE)
+block = Block(0,100,75,50, BLUE)
 
 # Run the game loop.
 running = True
